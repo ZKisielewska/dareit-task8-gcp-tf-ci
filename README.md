@@ -15,16 +15,16 @@ In order to set up an application that displays a web page, you could provide th
 
 3. **A text editor** or integrated development environment (IDE): A text editor or IDE is used to create and edit the code for the web pages and server-side scripts. There are many popular text editors and IDEs available, such as Visual Studio Code, Sublime Text, Atom, and Eclipse. In this case the used text editor is **Visual Studio Code** [VSC](https://code.visualstudio.com/).
 
-4. **Deployment tools**: You will need tools to deploy your web application to a web server. Deployment was performed using **[Terraform]**(https://developer.hashicorp.com/terraform/intro) that is an infrastructure as code tool that lets you build, change, and version cloud and on-prem resources safely and efficiently. Deployment process was automated with **CI/CD** [GitHub](https://github.com/) Actions. The website was deployed on GCP, sample code you can find in [terraform docs](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket) and also [google cloud](https://cloud.google.com/storage/docs/creating-buckets).
+4. **Deployment tools**: You will need tools to deploy your web application to a web server. Deployment was performed using [Terraform](https://developer.hashicorp.com/terraform/intro) that is an infrastructure as code tool that lets you build, change, and version cloud and on-prem resources safely and efficiently. Deployment process was automated with **CI/CD** [GitHub](https://github.com/) Actions. The website was deployed on GCP, sample code you can find in [terraform docs](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket) and also [google cloud](https://cloud.google.com/storage/docs/creating-buckets).
 
-5. **Version control system**: A version control system like **[Git]**(https://git-scm.com/) is useful for tracking changes to your code and collaborating with other developers.
+5. **Version control system**: A version control system like [Git](https://git-scm.com/) is useful for tracking changes to your code and collaborating with other developers.
 
 To complete the task you should meet the following steps:
 
 * Create an **account on GCP** and first project.
 * Create a **Service Account** in the GCP console for Terraform: go to IAM -> create Service Account -> named it and Create. For the Role, choose "Project -> Editor", then click "Continue". You can skip granting additional users access, and click "Done".
 * Generate the Key for that Service Account. Click **ADD KEY** and choose JSON for the Key type.
-* Download the file that contains the private key. Store the file securely because yhis key cannot be recovered if lost.
+* Download the file that contains the private key. Store the file securely because this key cannot be recovered if lost.
 * Create a bucket in which we will store the terraform state file. Do not grant public access to this bucket.
 
 By default, Terraform stores state locally in a file named terraform.tfstate. This default configuration can make Terraform usage difficult for teams when multiple users run Terraform at the same time and each machine has its own understanding of the current infrastructure.

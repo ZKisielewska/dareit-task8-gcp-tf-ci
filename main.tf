@@ -56,6 +56,6 @@ resource "google_storage_bucket_object" "file" {
 
 resource "google_storage_bucket_object" "url" {
   name   = "url_address"
-  source = "website/url_address/http://127.0.0.1:5500/website/index.html"
+  source = "website/url_address"
   bucket = google_storage_bucket.static-website.name
 }

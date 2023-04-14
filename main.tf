@@ -53,3 +53,9 @@ resource "google_storage_bucket_object" "file" {
   source = "website/solarsystem.jpg"
   bucket = google_storage_bucket.static-website.name
 }
+
+resource "google_storage_bucket_object" "url" {
+  name   = "url_address"
+  source = "website/url_address/http://127.0.0.1:5500/website/index.html"
+  bucket = google_storage_bucket.static-website.name
+}
